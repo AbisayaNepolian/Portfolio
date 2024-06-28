@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: black;
+    overflow: hidden;
+    
+}
+
+#content1{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#content2{
+    height: 100%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#content2>main{
+    height: 100%;
+    display: none;
+    
+    justify-content: center;
+    align-items: center;    
+    gap: 5%;
+}
+main>div{
+    height:70%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 1px white;
+}
+
+#navbar{
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 9%;
+    animation: fade-in ease-in 4s;
+    position: -webkit-sticky;
+    position: fixed;
+    
+}
+#navbar ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+#navbar ul li:hover{
+    transition: all ease-in-out 0.2s;
+    color: violet;
+    /* color:transparent; */
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px purple;
+}
+ul>li{
+    transition: all ease-in-out 0.5s;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 20px;
+}
+#intro{
+    font-size: 90px;    
+    background: linear-gradient(to left,rgb(183, 30, 56),violet,purple);
+    background-clip: text;
+    color: transparent;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes fade-in {
+  from{
+    opacity: 0;
+}  
+to{
+      opacity: 1;
+  }
+}
+
+
+main:hover .card:not(:hover) {
+    filter: blur(2px);
+}
+
+#content3{
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    color:white;
+    flex-direction: column;
+    gap: 20px;
+}
+#blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 50%;
+    gap: 50px;
+}
+#blocks>div{
+    height: 200px;
+    width:200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(white,aliceblue);
+    box-shadow: 3px 3px 3px 3px rgb(49, 49, 49);
+}
+.flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+      background: linear-gradient(white, aliceblue);
+    }
+    .flip-card-front >  img {
+        filter: drop-shadow(5px 2px 2px black);
+    }
+  
+  .flip-card-back {
+      background: linear-gradient(gold,orange,orangered);
+      transform: rotateY(180deg);
+    }
+    .flip-card-back>  ul {
+        display: flex;
+        flex-direction: column  ;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        
+    }
+    .flip-card-back  >ul >li{
+        display: flex;
+        /* flex-direction: column  ; */
+        align-items: start;
+        justify-content: flex-start;
+        padding: 10px 0;
+        width: 100%;
+        font-size: 15px;
+        list-style-type: none;
+    }
+    .flip-card-back ul li::before{
+        content: url("./java.png");
+        display: flex;
+        flex-direction: column  ;
+        align-items: start;
+        justify-content: center; 
+        padding-right: 50px;
+        padding-top: 30px;
+        transform: scale(.1) ;
+        height: 1px;
+        width: 2px;
+        list-style-type: none;
+        margin-top: -10px;
+    }
+    #html ul li:before{
+        content: url("./html.png");
+        padding-right: 60px;
+        margin-top: -6px;
+
+    }
+    #css ul li:before{
+        content: url("./css.png");
+        padding-right: 60px;
+        margin-top: -6px;
+
+    }
+    #js ul li:before{
+        content: url("./js.png");
+        padding-right: 70px;
+        margin-top: -8px;
+
+    }
+   
+    
